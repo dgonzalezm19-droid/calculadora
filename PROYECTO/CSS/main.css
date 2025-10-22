@@ -1,0 +1,108 @@
+:root {
+  --bg: #0f1724;
+  --panel: #0b1220;
+  --accent: #10b981;
+  --btn: #111827;
+  --btn-light: #1f2937;
+  --text: #e6eef8;
+  --muted: #9aa7b7;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* --- ESTILO GENERAL DE LA PÁGINA --- */
+body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #222;
+}
+
+a {
+  color: #0077ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img, video {
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+/* --- CALCULADORA --- */
+.calc {
+  width: 340px;
+  border-radius: 14px;
+  padding: 18px;
+  background: var(--panel);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  color: var(--text);
+  margin-top: 25px;
+}
+
+.display {
+  height: 68px;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.expr {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1;
+  min-height: 16px;
+  text-align: right;
+}
+
+.result {
+  font-size: 26px;
+  font-weight: 600;
+  text-align: right;
+  color: var(--text);
+  min-height: 28px;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button.key {
+  height: 54px;
+  border-radius: 10px;
+  border: none;
+  background: var(--btn);
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button.key:hover {
+  background: var(--btn-light);
+}
+
+button.op {
+  color: var(--accent);
+}
+
+button.eq {
+  background: var(--accent);
+  color: #fff;
+}
